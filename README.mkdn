@@ -1,0 +1,20 @@
+fdopen for PHP
+-----
+
+A small extension for fdopen support in PHP.
+
+Install
+-----
+
+    sudo apt-get install php5-dev
+    phpize
+    make
+    sudo make install
+    echo 'extension=fdopen.so' > /etc/php5/conf.d/fdopen.ini
+
+Usage
+-----
+
+    $fp = fdopen(2, 'w');
+    fwrite($fp, "hello\n");
+
