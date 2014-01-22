@@ -5,7 +5,11 @@
 #include "php.h"
 #include "php_fdopen.h"
 
+#if PHP_VERSION_ID <= 50299
 static function_entry fdopen_functions[] = {
+#else
+static zend_function_entry fdopen_functions[] = {
+#endif
     PHP_FE(fdopen, NULL)
     {NULL, NULL, NULL}
 };
